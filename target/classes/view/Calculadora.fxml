@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="435.0" style="-fx-max-width: 440px; -fx-max-height: 550px; -fx-background-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CalculadoraController">
+   <children>
+      <Label fx:id="lblMostrar" alignment="CENTER_RIGHT" layoutX="21.0" prefHeight="135.0" prefWidth="393.0" style="-fx-background-color: black;" text="0" textFill="WHITE" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="7.0" layoutY="135.0" maxHeight="397.0" maxWidth="428.0" prefHeight="397.0" prefWidth="428.0" style="-fx-max-width: 420px; -fx-max-height: 395px;" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="btnReset" mnemonicParsing="false" onAction="#btnResetOnAction" prefHeight="75.0" prefWidth="100.0" style="-fx-max-width: 100px; -fx-max-height: 75px; -fx-background-color: #3c3c3c;" text="AC">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.9333333373069763" green="0.5098039507865906" blue="0.9333333373069763" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button fx:id="btnPar" mnemonicParsing="false" onAction="#btnParOnAction" prefHeight="75.0" prefWidth="100.0" style="-fx-max-width: 100px; -fx-max-height: 75px; -fx-background-color: #3c3c3c;" text="()" textFill="WHITE" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnPorc" mnemonicParsing="false" onAction="#btnPorcOnAction" prefHeight="75.0" prefWidth="100.0" style="-fx-max-width: 100px; -fx-max-height: 75px; -fx-background-color: #3c3c3c;" text="\%" textFill="WHITE" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnDiv" mnemonicParsing="false" onAction="#btnDivOnAction" prefHeight="75.0" prefWidth="100.0" style="-fx-max-width: 100px; -fx-max-height: 75px; -fx-background-color: #3c3c3c;" text="/" textFill="WHITE" GridPane.columnIndex="3">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSete" mnemonicParsing="false" onAction="#btnSeteOnAction" prefHeight="75.0" prefWidth="100.0" style="-fx-max-width: 100px; -fx-max-height: 75px; -fx-background-color: #3c3c3c;" text="7" textFill="WHITE" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnOito" mnemonicParsing="false" onAction="#btnOitoOnAction" prefHeight="75.0" prefWidth="100.0" style="-fx-max-width: 100px; -fx-max-height: 75px; -fx-background-color: #3c3c3c;" text="8" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnNove" mnemonicParsing="false" onAction="#btnNoveOnAction" prefHeight="75.0" prefWidth="100.0" style="-fx-max-width: 100px; -fx-max-height: 75px; -fx-background-color: #3c3c3c;" text="9" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnMult" mnemonicParsing="false" onAction="#btnMultOnAction" prefHeight="75.0" prefWidth="100.0" style="-fx-max-width: 100px; -fx-max-height: 75px; -fx-background-color: #3c3c3c;" text="*" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnQuatro" mnemonicParsing="false" onAction="#btnQuatroOnAction" prefHeight="75.0" prefWidth="100.0" style="-fx-max-width: 100px; -fx-max-height: 75px; -fx-background-color: #3c3c3c;" text="4" textFill="WHITE" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnCinco" mnemonicParsing="false" onAction="#btnCincoOnAction" prefHeight="75.0" prefWidth="100.0" style="-fx-max-width: 100px; -fx-max-height: 75px; -fx-background-color: #3c3c3c;" text="5" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSeis" mnemonicParsing="false" onAction="#btnSeisOnAction" prefHeight="75.0" prefWidth="100.0" style="-fx-max-width: 100px; -fx-max-height: 75px; -fx-background-color: #3c3c3c;" text="6" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSub" mnemonicParsing="false" onAction="#btnSubOnAction" prefHeight="75.0" prefWidth="100.0" style="-fx-max-width: 100px; -fx-max-height: 75px; -fx-background-color: #3c3c3c;" text="-" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial" size="26.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnUm" mnemonicParsing="false" onAction="#btnUmOnAction" prefHeight="75.0" prefWidth="100.0" style="-fx-max-width: 100px; -fx-max-height: 75px; -fx-background-color: #3c3c3c;" text="1" textFill="WHITE" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnDois" mnemonicParsing="false" onAction="#btnDoisOnAction" prefHeight="75.0" prefWidth="100.0" style="-fx-max-width: 100px; -fx-max-height: 75px; -fx-background-color: #3c3c3c;" text="2" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnTres" mnemonicParsing="false" onAction="#btnTresOnAction" prefHeight="75.0" prefWidth="100.0" style="-fx-max-width: 100px; -fx-max-height: 75px; -fx-background-color: #3c3c3c;" text="3" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSom" mnemonicParsing="false" onAction="#btnSomOnAction" prefHeight="75.0" prefWidth="100.0" style="-fx-max-width: 100px; -fx-max-height: 75px; -fx-background-color: #3c3c3c;" text="+" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnZero" mnemonicParsing="false" onAction="#btnZeroOnAction" prefHeight="75.0" prefWidth="100.0" style="-fx-max-width: 100px; -fx-max-height: 75px; -fx-background-color: #3c3c3c;" text="0" textFill="WHITE" GridPane.columnSpan="2" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnVir" mnemonicParsing="false" onAction="#btnVirOnAction" prefHeight="75.0" prefWidth="100.0" style="-fx-max-width: 100px; -fx-max-height: 75px; -fx-background-color: #3c3c3c;" text="," textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Arial" size="26.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnIgual" mnemonicParsing="false" onAction="#btnIgualOnAction" prefHeight="75.0" prefWidth="100.0" style="-fx-max-width: 100px; -fx-max-height: 75px; -fx-background-color: linear-gradient(to right, violet, blue);" text="=" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnBackspace" mnemonicParsing="false" onAction="#btnBackspaceOnAction" prefHeight="75.0" prefWidth="100.0" style="-fx-max-width: 100px; -fx-max-height: 75px; -fx-background-color: #3c3c3c;" text="⌫" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font></Button>
+         </children>
+      </GridPane>
+      <Label fx:id="lblOperador" layoutX="21.0" layoutY="85.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="50.0" prefWidth="393.0" textFill="WHITE" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="85.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
